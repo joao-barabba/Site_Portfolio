@@ -57,7 +57,7 @@ header{
 }
 .banner p{
     color: #fff;
-    font-family:"Josefin+Slab", serif ;
+    font-family:"Josefin Slab", serif ;
     font-size: 2rem;
     text-shadow: .2rem .2rem rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
@@ -65,5 +65,10 @@ header{
 }
 .banner button{
     font-family: "Muli", serif;
-    color: ;
+    color:#fff ;
+    background: #8E2DE2;  
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    padding: 1rem 4rem;
+    border-radius: 1rem;
 }
