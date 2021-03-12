@@ -4,3 +4,10 @@ Neste novo projeto darei inicio a um site onde usarei como meu portfólio própr
 ## Tarefas
 
 O controle das tarefas desse projeto será realizado no GitHub.
+
+## Icones
+
+:package: Nova Funcionalidade
+:up: Atualização
+:beatle: Correção de bug
+:checkered_flag: Release
