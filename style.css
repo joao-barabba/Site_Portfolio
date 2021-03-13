@@ -8,12 +8,12 @@
   list-style: none;
   text-decoration: none;
 }
-:root{
+:root{/*Aqui declaro variaveis de acesso a fontes*/
     --font-primary:"Baloo da 2", serif;
     --font-secundary:"Josefin Slab", serif;
     --font-action:"Muli", serif;
 }
-.hamburguer{
+.hamburguer{/*botão lateral que aciona meu sidebar*/
     width: 2rem;
     height: 2rem;
     position: fixed;
@@ -25,17 +25,54 @@
     justify-content: space-evenly;
     cursor: pointer;
 }
-.hamburguer:hover{
-    animation: zoom 1s forwards;
+.show-menu .hamburguer{/*Estilo assim que evento é chamado no JS*/
+    right: 16rem;
 }
 
-.line{
+.line{/*formatação do botão de Hamburguer*/
     width: 100%;
     height: .1rem;
     background-color: #fff;
     box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
 }
+.show-menu #line1{/*Estilo assim que evento é chamado no JS*/
+    transform:rotate(45deg) translate(0.3rem, .45rem);
+    
+}
+.show-menu #line2{/*Estilo assim que evento é chamado no JS*/
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line3{/*Estilo assim que evento é chamado no JS*/
+    transform: rotate(-45deg) translate(.3rem, -.45rem);
+}
+.hamburguer span{/*Formatação de span*/
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a00e0;
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+.hamburguer span::before{/*Usando um before coloco um pseudo elemento em sua frente para dar impressão de seta apontando para o x*/
+    content:"";
+    position: absolute;
+    border-right: .5rem solid #4a00e0;
+    border-left: .5rem solid transparent;
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
 
+}
+.show-menu .hamburguer:hover span{/*Estilo assim que evento é chamado no JS*/
+    opacity: 1;
+}
 header {
   width: 100%;
   height: 100vh; /* Altura de View do dispositivo*/
@@ -84,7 +121,7 @@ header {
   opacity: 0;
   animation: movebanner 1s 0.5s forwards;
 }
-@keyframes movebanner {
+@keyframes movebanner {/*Efeito aplicado no H1,p e button do banner*/
   0% {
     transform: translateY(10rem) rotateY(-30deg);
   }
@@ -93,19 +130,22 @@ header {
     opacity: 1;
   }
 }
-.sidebar{
+.sidebar{/*Formatação do menu Lateral*/
     width: 20rem;
     height: 100vh;
     background-color: #fff;
     position: fixed;
     top: 0;
-    right: 0;
-
+    right: -20rem;
+    transition: all 1s;
 }
-.menu{
+.show-menu .sidebar {/*Estilo assim que evento é chamado no JS*/
+    right: 0;
+  }
+.menu{/*formatação da lista dentro do meu menu*/
     position: absolute;
     top:30%;
-    left:50%;
+    left:35%;
     transform: translate(-50%,-%50);
 
 }
@@ -123,18 +163,17 @@ header {
     transition: color 1s;
 }
 .social-media{
-    position: absolute;
+  position: absolute;
   bottom: 2rem;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 .social-media i{
-    background-color: #4a00e0;
-    color: #fff;
-    height: 2.1rem;
-    width: 2.4rem;
-    font-size: 1.9rem;
+    color:#4a00e0;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     border-radius: 50%;
@@ -142,7 +181,7 @@ header {
 }
 
 .social-media i:hover{
-    background-color: #8e2de2;
+   color: #8e2de2;
 }
 .banner p {
   color: #fff;
@@ -172,3 +211,4 @@ header {
 .banner button:hover {
   color: #000;
 }
+
