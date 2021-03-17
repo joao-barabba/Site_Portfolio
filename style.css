@@ -19,7 +19,7 @@
   width: 2rem;
   height: 2rem;
   position: fixed;
-  z-index: 100;
+  z-index: 9900;
   right: 2rem;
   top: 2rem;
   display: flex;
@@ -148,6 +148,7 @@ header {
   top: 0;
   right: -20rem;
   transition: all 1s;
+  z-index: 9000;
 }
 .show-menu .sidebar {
   /*Estilo assim que evento é chamado no JS*/
@@ -171,6 +172,8 @@ header {
 }
 .menu-link:hover {
   color: #4a00e0;
+  border-bottom: solid 3px #8e2de2;
+  margin-bottom: 1.5rem;
   transition: color 1s;
 }
 .social-media {
@@ -291,16 +294,16 @@ header {
   width: 100%;
 }
 .projetos{
-  display: flex;
-  justify-content: space-evenly;
+  display: flex;/*Alinhando um ao lado do outro*/
+  justify-content: space-evenly;/* Espaçando de forma aleatória*/
 
 }
 .card{
   width: 20rem;
   height: 30rem;
-  position: relative;
+  position: relative;/*Card é Pai, então por isso é relativo pois o filho irá precisar depois.*/
 }
-.card-img-wrapper {
+.card-img-wrapper {/**/
   width: 100%;
   height: 100%;
   background-color:#4a00e0;
@@ -348,9 +351,7 @@ header {
   line-height: 1.1rem;
   margin-bottom: .6rem;
 }
-.card-info .btn{
-  width: 8rem;
-  height: 2.5rem;
+.btn{/*Aqui criei uma classe btn para não  precisar reescrever código para botões*/
   background: #8e2de2;
   background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
   background: linear-gradient(to right, #4a00e0, #8e2de2);
@@ -362,6 +363,10 @@ header {
   cursor: pointer;
   font-size: 1rem;
 }
+.card-info .btn{
+  width: 8rem;
+  height: 2.5rem;
+}
 
 
 .card:hover .card-info{
@@ -370,5 +375,93 @@ header {
   visibility: visible;
 }
 .card-info .btn:hover{
+  color: #000;
+}
+.sessao-contato{
+  width: 100%;
+  height: 100vh;
+  background-color:#272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.contato-wrapper{
+  width: 60%;
+  display: flex;
+  height: 30rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+}
+.contato-left{
+  width: 35%;
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+  url(imagens/contato.jpg);
+  background-size: cover;
+}
+.contato-right {
+  width: 65%;
+  background-color: #eee;
+  padding: 1rem 3rem 3rem 3rem;
+}
+.sessao-contato h1{
+  font-family: var(--font-primary);
+  color: #272727;
+  font-size: 3rem;
+  font-weight: lighter;
+  width: 100%;
+  text-align: center;
+}
+.sessao-contato form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-group{
+  position: relative;
+}
+.field{
+  background:transparent;
+  border: none;
+  width: 20rem;
+  font-size: 1.5rem;
+  font-family: var(--font-secundary);
+  border-bottom: 2px dashed #636363;
+  height: 3rem;
+  outline: none;
+  margin: 1rem 0;
+}
+.input-group textarea{
+  padding-top: 1rem;
+  max-height: 3rem;
+  max-width: 25rem;
+}
+.field-label{
+  position: absolute;
+  left: 0;
+  font-family: var(--font-secundary);
+  text-transform: uppercase;
+  top: 2rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.field:focus ~ label{/*Quando o campo estiver em foco o label a seguir adere a este estilo*/
+  top: 0;
+  font-size: 0.7rem;
+}
+.field:focus{
+    border-bottom: 1px solid;
+}
+.btn-submit{
+  width:80%;
+  height: 2.5rem;
+  text-transform: uppercase;
+  margin-top:1rem ;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+.btn-submit:hover{
   color: #000;
 }
