@@ -19,7 +19,7 @@
   width: 2rem;
   height: 2rem;
   position: fixed;
-  z-index: 9900;
+  z-index: 110;
   right: 2rem;
   top: 2rem;
   display: flex;
@@ -148,7 +148,7 @@ header {
   top: 0;
   right: -20rem;
   transition: all 1s;
-  z-index: 9000;
+  z-index: 100;
 }
 .show-menu .sidebar {
   /*Estilo assim que evento é chamado no JS*/
@@ -385,6 +385,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .contato-wrapper{
   width: 60%;
@@ -463,5 +464,69 @@ header {
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .btn-submit:hover{
+  color: #000;
+}
+.sessao-orcamento{/*Container de orçamento*/
+  width: 100%;
+  height: 100vh;
+  background: url("./imagens/bg-orcamento.jpg");
+  object-fit: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center
+  ;
+  margin-bottom: 1rem;
+}
+.orcamento-wrapper{/*Fundo do form*/
+  width: 60%;
+  height: 80%;
+  background-color: #ffffff99;
+  border-radius: 10px;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.sessao-orcamento h1{/*Estilo do H1 de orçamento*/
+  position: absolute;
+  top: -2.5rem;
+  left: 2rem;
+  background: #8e2de2;
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  padding: 0 3rem;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: lighter;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.sessao-orcamento form{/*Posicionamento do Form*/
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.sessao-orcamento label{
+  font-family: var(--font-secundary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sessao-orcamento input[type="number"]{/*Nessa formatação somente o input com tipo number é formatado*/
+  font-family: var(--font-secundary);
+  width:4rem;
+  font-size: 2rem;
+  outline: none;
+  border-radius: 10px;
+  border:none;
+  padding: 0.3rem;
+}
+.btn-orcamento{
+  text-transform: uppercase;
+  cursor: pointer;
+  columns: 2;/*Coloco o btn na colum 2 do grid*/
+  padding: 1rem;
+}
+.btn-orcamento:hover{
   color: #000;
 }
