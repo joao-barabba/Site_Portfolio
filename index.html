@@ -18,7 +18,7 @@
         <div class="line" id="line3"></div>
         <span>Fechar</span> <!--Este span é acionado pelo JS no menu lateral, na hora de fechar o arquivo ele emite a mensagem-->
       </div> 
-      <header>
+      <header id="home">
             <div class="img-wrapper">
                 <img src="imagens/img_home.jpg" alt="">
             </div>
@@ -31,7 +31,7 @@
         <aside class="sidebar"><!--Aqui estruturei o menu lateral que fica dentro do menu hamburguer-->
           <nav>
             <ul class="menu">
-              <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+              <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
               <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
               <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
               <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
@@ -198,7 +198,21 @@
                   </form>
                 </div>
               </section>
-
+              <footer>
+                <div class="footer-content">
+                  <p>Copyright &copy; 2021, João Barabba - Developer</br>Todos os direitos reservados.</p>
+                    <div class="social-list">
+                      <ul>  
+                        <li><a href="https://www.linkedin.com/in/jo%C3%A3o-victor-soares-nascimento-600484173/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/joao-barabba"><i class="fab fa-github-alt"></i></a></li>
+                        <li><a href="https://www.instagram.com/jvsoares15/"><i class="fab fa-instagram"></i></a></li>
+                      </ul> 
+                    </div>
+                </div>
+              </footer>
+              <a href="#home" id="link-topo">
+                <i class="fas fa-arrow-up"></i>
+              </a>
   </body>
   <script src="script.js"></script><!--link para meu js-->
 </html>

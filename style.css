@@ -14,6 +14,9 @@
   --font-secundary: "Josefin Slab", serif;
   --font-action: "Muli", serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 .hamburguer {
   /*botão lateral que aciona meu sidebar*/
   width: 2rem;
@@ -367,8 +370,6 @@ header {
   width: 8rem;
   height: 2.5rem;
 }
-
-
 .card:hover .card-info{
   bottom: 2rem;
   opacity: 1;
@@ -385,7 +386,6 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 .contato-wrapper{
   width: 60%;
@@ -475,7 +475,6 @@ header {
   display: flex;
   justify-content: center
   ;
-  margin-bottom: 1rem;
 }
 .orcamento-wrapper{/*Fundo do form*/
   width: 60%;
@@ -529,4 +528,46 @@ header {
 }
 .btn-orcamento:hover{
   color: #000;
+}
+footer{
+  width: 100%;
+  height: 7rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content p{
+  font-family: var(--font-secundary);
+  color: #a7a7a7;
+  font-size: 1.2rem;
+}
+.social-list a{
+  margin: 0 2rem;
+  color: #a7a7a7;
+  font-size: 1.3rem;
+}
+.social-list ul {
+  display: flex;
+}
+#link-topo{
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: #8e2de2;
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: .3rem;
+  box-shadow: 0 0.1rem 0.6rem #00000009;
 }
