@@ -142,6 +142,15 @@ header {
     opacity: 1;
   }
 }
+.banner p {
+  color: #fff;
+  font-family: var(--font-secundary);
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: movebanner 1s 0.7s forwards;
+}
 .sidebar {
   /*Formatação do menu Lateral*/
   width: 20rem;
@@ -199,15 +208,6 @@ header {
 
 .social-media i:hover {
   color: #8e2de2;
-}
-.banner p {
-  color: #fff;
-  font-family: var(--font-secundary);
-  font-size: 2rem;
-  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: movebanner 1s 0.7s forwards;
 }
 .banner button {
   font-family: var(--font-action);
@@ -466,6 +466,9 @@ header {
 .btn-submit:hover{
   color: #000;
 }
+.preenchido{
+  pointer-events: none;
+}
 .sessao-orcamento{/*Container de orçamento*/
   width: 100%;
   height: 100vh;
@@ -473,8 +476,7 @@ header {
   object-fit: cover;
   align-items: center;
   display: flex;
-  justify-content: center
-  ;
+  justify-content: center;
 }
 .orcamento-wrapper{/*Fundo do form*/
   width: 60%;
@@ -555,19 +557,21 @@ footer{
 .social-list ul {
   display: flex;
 }
-#link-topo{
+#link-topo{/*Botão para voltar ao topo da página*/
   position: fixed;
   right: 3rem;
   bottom: 3rem;
-  width: 3rem;
+  width: 3rem;/*Posicionamento*/
   height: 3rem;
   background: #8e2de2;
   background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
   background: linear-gradient(to right, #4a00e0, #8e2de2);
-  display: flex;
+  display: flex;/*ALinhamento*/
   justify-content: center;
   align-items: center;
   color: #fff;
   border-radius: .3rem;
   box-shadow: 0 0.1rem 0.6rem #00000009;
 }
+
+
