@@ -632,7 +632,7 @@ footer{
       height: 100vh;
     }
     .contato-wrapper{
-      width: 80%;
+      width: %;
       display: flex;
       height: 40rem;
     }
@@ -648,6 +648,9 @@ footer{
    
 }
 @media  screen and (max-width: 640px){/*Resposividade Tamanho mais ou menos  de Celular*/
+  .sidebar{
+    height: 100%;
+  }
   .conhecimentos {
     display: inline;
   }
@@ -669,7 +672,6 @@ footer{
   .conhecimento:nth-child(6) {
     margin-bottom: 20px;
   }
-    
     .conhecimentos-img-wrapper {
       width: 120%;
     }
@@ -677,35 +679,166 @@ footer{
       object-fit: cover;
       width: 75%;
     }
+    .projetos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-info{
+      position:absolute;
+      bottom: 0;
+      padding: 1rem;
+    }
     .card{
-      width: 6rem;
-      height: 15rem;
+      width: 12rem;
+      height: 18rem;
+      margin-bottom: 1rem;
     }
     .card-info h2{
-      font-size: .2rem
+      font-size: .8rem;
+      ;
     }
     .card-info h3{
-      font-size: .3rem;
+      font-size: .7rem;
     }
     .card-info p{
-      font-size: .3rem;
+      font-size: .6rem;
     }
     .sessao-contato{
       width: 100%;
       height: 100vh;
+      display: flex;
+      margin-top: 1rem;
     }
     .contato-wrapper{
+      width: 90%;
+      display: flex;
+      height: 30rem;
+      background-color: #eee;
+    }
+  
+    .contato-right {
+      width: 20%;
+      
+    }
+    .sessao-contato h1{
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      font-weight: lighter;
+      width: 100%;
+      text-align: center;
+    }
+    .sessao-contato form{
       width: 80%;
       display: flex;
-      height: 40rem;
+      flex-direction: column;
+      align-items: center;
     }
-    .sessao-orcamento{/*Container de orçamento*/
-      width: 100%;
-      height: 100vh;
+    .input-group{
+      position: relative;
     }
+    .field{
+      background:transparent;
+      border: none;
+      width: 15rem;
+      font-size: 1.5rem;
+      font-family: var(--font-secundary);
+      border-bottom: 2px dashed #636363;
+      height: 3rem;
+      outline: none;
+      margin: 1rem 0;
+      
+    }
+    .btn-submit{
+      width: 9rem;
+    }
+    
     .orcamento-wrapper{/*Fundo do form*/
       width: 90%;
-      height: 60%;
+      height: 90%;
+      background-color: #ffffff99;
+      border-radius: 10px;
+      box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
       position: relative;
+    }
+    .sessao-orcamento h1{/*Estilo do H1 de orçamento*/
+      position: absolute;
+      top: -4rem;
+      left: 1rem;
+      background: #8e2de2;
+      background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      padding: 0 3rem;
+      color: #fff;
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      font-weight: lighter;
+      box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+    .sessao-orcamento form{/*Posicionamento do Form*/
+      margin: 3.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 2rem;
+      row-gap: 2rem;
+    }
+    .sessao-orcamento label{
+      font-family: var(--font-secundary);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .sessao-orcamento input[type="number"]{/*Nessa formatação somente o input com tipo number é formatado*/
+      font-family: var(--font-secundary);
+      width:3rem;
+      font-size: 1.5rem;
+      outline: none;
+      border-radius: 10px;
+      border:none;
+      padding: 0.3rem;
+    }
+    footer{
+      width: 100%;
+      height: 7rem;
+      background-color: #17181b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-content{
+      width: 100%;
+      display: inline;
+      justify-content: space-between;
+      padding: 1rem;
+      text-align: center;
+    }
+    .footer-content p{
+      font-family: var(--font-secundary);
+      color: #a7a7a7;
+      font-size: 1rem;
+    }
+    .social-list a{
+      color: #a7a7a7;
+      font-size: 1.3rem;
+    }
+    .social-list ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    #link-topo{/*Botão para voltar ao topo da página*/
+      position: fixed;
+      right: 5rem;
+      bottom: 3rem;
+      width: 3rem;/*Posicionamento*/
+      height: 3rem;
+      background: #8e2de2;
+      background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      display: flex;/*ALinhamento*/
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: .3rem;
+      box-shadow: 0 0.1rem 0.6rem #00000009;
     }
 }
